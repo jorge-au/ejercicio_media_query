@@ -1,0 +1,121 @@
+/* Ejercicio:
+1) Cambiarle la fuente de letra al titulo y a los textos ( el que mas nos guste).
+2) Que el texto rosado tenga sangria
+3) usando media query hacer que se adapte el contenido a dispositivos de tablet y de celular.*/
+h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.uno{
+    width:300px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    padding:10px;
+    background-color:lightblue;
+    width: 45%;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.text_card{
+    padding: 5px 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.texto{
+    width: 80%;
+    margin: auto;
+    text-indent: 50px;
+    font-family: 'Playfair Display', serif;
+}
+
+section{
+    background-color: lightcoral;
+}
+
+/* Media Query para Tablet 768px */
+@media screen and (max-width: 768px) {
+    h1{
+        font-size: 30px;
+    }
+    main{
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    .texto{
+        text-indent: 40px;
+    }
+    section{
+        height: 140px;
+    }
+    
+/* Esta llave cierra el @media */
+}    
+
+
+
+/* Media Query para celular Celular  425px*/
+@media screen and  (max-width: 425px){
+    h1{
+        font-size: 1.5rem;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .uno{
+        width:300px;
+        margin-bottom: 50px;
+    }
+    img{
+        width: 100%;
+    }
+    
+    a{
+        width: 50%;
+    }
+    
+    .text_card{
+       font-size: 0.8rem;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    .texto{
+        width: 80%;
+        text-indent: 20px;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    section{
+        background-color: lightcoral;
+        height: auto;
+    }
+    
+    /* Fin del media para celular */
+}
